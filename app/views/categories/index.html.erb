@@ -14,4 +14,7 @@
         </ul>
     <% end %>
     <%= will_paginate %>
+    <%if logged_in?%>
+      <strong><%= link_to "Create new category", new_category_path %></strong>
+      <%end%>
 </div>
