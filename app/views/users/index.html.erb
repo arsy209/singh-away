@@ -1,5 +1,4 @@
 <h1 align="center">Current Signed up Users</h1>
-
 <div align="center">
     <%= will_paginate %>
     <% @users.each do |user|%>
@@ -15,7 +14,6 @@
                         <li><%= link_to "Delete this user", user_path(user), method: :delete,
                             data: { confirm: "Are you positive you want to make this move?" } %></li>
                     <% end %>
-
                 </div>
             </div>
         </ul>

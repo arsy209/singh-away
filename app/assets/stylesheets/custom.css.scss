@@ -1,8 +1,15 @@
-$navbar-default-bg: #7097CF;
+$navbar-default-bg: lightgrey;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.jumbotron {
+    background-image: asset-url('create.png');
+    background-size: cover;
+    min-height: 450px;
+
+
+}
 #logo {
     float: left;
     font-size: 1.7em;
@@ -13,7 +20,7 @@ $navbar-default-bg: #7097CF;
 }
 
 #logo:hover {
-    color: lightblue;
+    color: black;
     text-decoration: none;
 }
 
@@ -71,6 +78,7 @@ $navbar-default-bg: #7097CF;
 
 
 .jumbotron h1{
+  color: white;
     margin-bottom: 30px;
     letter-spacing: -1px;
 }
