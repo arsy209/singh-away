@@ -5,16 +5,15 @@
        <% if  current_user == @user%>
       <%= link_to 'Edit your profile', edit_user_path(current_user),class: "btn btn-primary btn-lg"  %>
       <%end%>
-
     </div>
 </div>
-<h4 align="center">
-    <%= @user.username %>'s articles
-</h4>
+  <h4 align="center">
+      <%= @user.username %>'s articles
+  </h4>
 <div class="center">
     <%= will_paginate @user_articles %>
 </div>
-<%= render 'articles/article', obj: @user_articles %>
+    <%= render 'articles/article', obj: @user_articles %>
 <div class="center">
     <%= will_paginate @user_articles %>
 </div>
