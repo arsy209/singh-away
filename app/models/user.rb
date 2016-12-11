@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
     validates :password_digest, presence: true,
               uniqueness: {case_sensitive: false},
-              length: {minimum: 6, maximum: 15}
+              length: {minimum: 6}
     VALID_EMAIL_REGEX= /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length:{maximum: 105},
                 uniqueness: true,
