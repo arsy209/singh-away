@@ -23,6 +23,7 @@ class CategoriesController < ApplicationController
 
     def update
        @category = Category.find(params[:id])
+       @category.user == current_user
        if @category.update(category_params)
            flash[:success] = "Category name successfully updated"
            redirect_to category_path(@category)
@@ -38,6 +39,7 @@ class CategoriesController < ApplicationController
 
     def destroy
         @category = Category.find(params[:id])
+        @category.user == current_user
         @category.destroy
         flash[:danger] = "category has been deleted"
         redirect_to categories_path
